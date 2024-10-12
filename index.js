@@ -2,8 +2,8 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import dotenv from "dotenv";
 import cors from 'cors';
-import adminRoutes from './routes/admin.route.js';
 
+import studentRouter from './routes/student.router.js';
 
 const app = express();
 
@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Routes
-app.use('/api/pupils', pupilsRouter);
+app.use('/api/student', studentRouter);
 
 
 app.listen(process.env.PORT, () => {
