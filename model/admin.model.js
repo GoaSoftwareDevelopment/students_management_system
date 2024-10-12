@@ -13,6 +13,6 @@ const adminSchema = new mongoose.Schema({
     admin_facebook: String
 });
 
-const Admin = mongoose.model('Admin', adminSchema);
+const Admin = mongoose.model('Admin', adminSchema, "admins");
 
 export default Admin;
